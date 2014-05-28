@@ -3,8 +3,19 @@
 </head>
 
 <body>
-  {{> hello}}
+	<div id="container">
+		<img src="logo.png" id="logoImage">
+		<br/> 
+  		<input type="button" class="btn btn-primary btn-large" value="Start" id="startBtn" />
+  		<div id="questionDiv">
+  			{{> question}}
+  		</div>
+	</div>
 </body>
+
+<template name="question">
+	test
+</template>
 
 <template name="hello">
   <h1>Hello World!</h1>
