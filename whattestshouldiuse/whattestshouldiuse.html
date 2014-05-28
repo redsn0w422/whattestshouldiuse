@@ -6,7 +6,10 @@
 	<div id="container">
 		<img src="logo.png" id="logoImage">
 		<br/> 
-  		<input type="button" class="btn btn-primary btn-large" value="Start" id="startBtn" />
+		<div id="startBtn_div">
+			{{> startBtn}}
+		</div>
+		<br/>
   		<div id="questionDiv">
   			{{> question}}
   		</div>
@@ -14,7 +17,14 @@
 </body>
 
 <template name="question">
-	test
+	<img src="{{question_name}}">
+	<br/>
+	<input type="button" class="btn btn-success btn-medium btn-answer" value="Yes" id="yesBtn">
+	<input type="button" class="btn btn-danger btn-medium btn-answer" value="No" id="noBtn">
+</template>
+
+<template name="startBtn">
+	<input type="button" class="btn btn-primary btn-large" value="Start" id="startBtn" />
 </template>
 
 <template name="hello">
