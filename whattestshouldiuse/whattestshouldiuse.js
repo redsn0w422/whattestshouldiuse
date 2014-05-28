@@ -10,20 +10,28 @@ if (Meteor.isClient) {
     }
   });
 
+  $("#yesBtn").click(function() {
+    console.log("YOU CLICKED YES VIA JQUERY");
+  });
+
   Template.question.question_name = function () {
     return "questions/nth-term-question.png";
   }
 
   Template.question.events({
     'click #yesBtn' : function () {
-      Template.question.question_name = function () {
-        return "questions/ast.png";
-      }
+      console.log("you clicked yes");
+      $("#question_name").attr("src","questions/ast.png");
+      // Template.question.question_name = function () {
+      //   return "questions/ast.png";
+      // }
     },
     'click #noBtn' : function () {
-      Template.question.question_name = function () {
-        return "questions/telescoping.png";
-      }
+      console.log("you clicked no");
+      $("#question_name").attr("src","questions/telescoping.png");
+      // Template.question.question_name = function () {
+      //   return "questions/telescoping.png";
+      // }
     }
   });
 
