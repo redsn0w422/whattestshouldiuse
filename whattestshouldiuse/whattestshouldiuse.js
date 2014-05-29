@@ -1,5 +1,5 @@
-var array = [[1,0,0,0],[0,1,0,0],[0,2,0,0],[0,3,0,0],[0,4,0,0],[0,5,0,0],[0,5,1,0],[0,5,2,0],[0,6,2,2],[0,6,0,0],[0,6,1,0],[0,6,2,0],[0,6,2,1]]
-var array2 = ["nth-term","geo","telescoping","p-series","ast","root-check","root","integral","integral","ratio-check","ratio","lim-comp-check","lim-comp"]
+var codes = [[1,0,0,0],[0,1,0,0],[0,2,0,0],[0,3,0,0],[0,4,0,0],[0,5,0,0],[0,5,1,0],[0,5,2,0],[0,6,2,2],[0,6,0,0],[0,6,1,0],[0,6,2,0],[0,6,2,1]]
+var names = ["nth-term","geo","telescoping","p-series","ast","root-check","root","integral","integral","ratio-check","ratio","lim-comp-check","lim-comp"]
 
 if (Meteor.isClient) {
   $(document).ready(function() {
