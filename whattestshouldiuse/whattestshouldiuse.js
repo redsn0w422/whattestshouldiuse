@@ -11,12 +11,23 @@ if (Meteor.isClient) {
       if (divID == "nth-term")
       {
         user_response = [1,0,0,0];
+        $("#question_div").html("<p>Diverges by nth term test</p>");
       }
     });
 
     $("#noBtn").click(function() {
       console.log("YOU CLICKED NO VIA JQUERY");
       var divID = $(this).attr("data-q");
+      if (divID == "nth-term")
+      {
+        $("#nth-term").hide();
+        $("#model-represent").show();
+      }
+
+      if (divID == "nth-term")
+      {
+        
+      }
     })
   });
 
