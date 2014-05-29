@@ -5,9 +5,15 @@ if (Meteor.isClient) {
   $(document).ready(function() {
     $("#yesBtn").click(function() {
       console.log("YOU CLICKED YES VIA JQUERY");
+      var divID = $(this).attr("data-q");
     });
+
+    $("#noBtn").click(function() {
+      console.log("YOU CLICKED NO VIA JQUERY");
+      var divID = $(this).attr("data-q");
+    })
   });
-  
+
   Meteor.startup(function () {
     $("#questionDiv").hide();
   });
