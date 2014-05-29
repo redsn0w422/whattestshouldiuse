@@ -1,4 +1,10 @@
 if (Meteor.isClient) {
+  $(document).ready(function() {
+    $("#yesBtn").click(function() {
+      console.log("YOU CLICKED YES VIA JQUERY");
+    });
+  });
+  
   Meteor.startup(function () {
     $("#questionDiv").hide();
   });
@@ -8,10 +14,6 @@ if (Meteor.isClient) {
       $("#questionDiv").show();
       $("#startBtn_div").hide();
     }
-  });
-
-  $("#yesBtn").click(function() {
-    console.log("YOU CLICKED YES VIA JQUERY");
   });
 
   Template.question.question_name = function () {

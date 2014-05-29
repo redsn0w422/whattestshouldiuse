@@ -10,14 +10,17 @@
 			{{> startBtn}}
 		</div>
 		<br/>
-  		<div id="questionDiv">
-  			{{> question}}
+  		<div id="nth-term-question">
+  			<img src="" id="question_name">
+			<br/>
+			<input type="button" class="btn btn-success btn-medium btn-answer" value="Yes" id="yesBtn">
+			<input type="button" class="btn btn-danger btn-medium btn-answer" value="No" id="noBtn">
   		</div>
 	</div>
 </body>
 
-<template name="question">
-	<img src="{{question_name}}" id="question_name">
+<template name="nth-term-question">
+	<img src="" id="question_name">
 	<br/>
 	<input type="button" class="btn btn-success btn-medium btn-answer" value="Yes" id="yesBtn">
 	<input type="button" class="btn btn-danger btn-medium btn-answer" value="No" id="noBtn">
