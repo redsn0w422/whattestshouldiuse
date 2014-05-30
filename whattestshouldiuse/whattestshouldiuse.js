@@ -5,6 +5,7 @@ var user_response = [0,0,0,0];
 
 if (Meteor.isClient) {
   $(document).ready(function() {
+    var model_chosen = "";
     $("#yesBtn").click(function() {
       console.log("YOU CLICKED YES VIA JQUERY");
       var divID = $(this).attr("data-q");
@@ -23,12 +24,26 @@ if (Meteor.isClient) {
         $("#nth-term").hide();
         $("#model-represent").show();
       }
-
-      if (divID == "nth-term")
-      {
-        
-      }
     })
+
+    $("#model_submit").click(function(){
+      switch (model_chosen):
+      { 
+        case "geo":
+          $("#question_div").html("<p>Use geometric series test for your series</p>");
+          user_response[1] = 1;
+          break;
+        case "telescoping":
+          $("#question_div").html("<p>")
+
+      }
+      else if (model)
+      console.log(model_chosen);
+    });
+
+    $("input:radio[name=user_model]").click(function() {
+      model_chosen = $(this).val();
+    });
   });
 
   Meteor.startup(function () {
