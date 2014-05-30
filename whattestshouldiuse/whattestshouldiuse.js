@@ -19,7 +19,7 @@ if (Meteor.isClient) {
     });
 
     $("#yesBtn-lim-comp-check").click(function(){
-      $("#quesiton_div").html("<p>Use limit comparison test.</p>");
+      $("#question_div").html("<p>Use limit comparison test.</p>");
     });
 
     $("#noBtn-nth-term").click(function() {
@@ -37,7 +37,7 @@ if (Meteor.isClient) {
     });
 
     $("#noBtn-lim-comp-check").click(function(){
-      $("#quesiton_div").html("<p>Use integral test.</p>");
+      $("#question_div").html("<p>Use integral test.</p>");
     });
     // $("input:button[id=yesBtn, dataq=root-check]").click(function() {
     //   console.log("CLICKED YES AND ROOT CHECK 2");

@@ -1,14 +1,11 @@
 /* CSS declarations go here */
-@font-face
-{
+@font-face {
 	font-family: 'helveticaN';
 	src: url('helvetica_n.ttf');
 }
 
-	#home {
-		text-align: center;
-		margin: 0 auto;
-		font-family: helveticaN;
+body {
+	font-family: helveticaN;
 }
 
 #logoImage {
