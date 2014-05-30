@@ -5,6 +5,21 @@ var user_response = [0,0,0,0];
 
 if (Meteor.isClient) {
   $(document).ready(function() {
+    $("#container").hide();
+    $("#logoImage-st1").hide();
+    $("#logoImage-st2").hide();
+    $("#logoImage-st3").hide();
+
+    $("#logoImage-st1").delay(200).fadeIn(1000).delay(2000).fadeOut(1000);
+    $("#logoImage-st2").delay(200).fadeIn(1000).delay(2000).fadeOut(1000);
+
+    $("#logoImage-st2").queue(function() {
+      $("#container").fadeIn(3000);
+      $(this).dequeue();
+    });
+
+    
+
     var model_chosen = "";
     $("#yesBtn-nth-term").click(function() {
       $("#question_div").html("<p>Diverges by nth term test</p>");
@@ -39,7 +54,7 @@ if (Meteor.isClient) {
     $("#noBtn-lim-comp-check").click(function(){
       $("#question_div").html("<p>Use integral test.</p>");
     });
-    
+
     // $("input:button[id=yesBtn, dataq=root-check]").click(function() {
     //   console.log("CLICKED YES AND ROOT CHECK 2");
     // });
