@@ -1,13 +1,4 @@
 /* CSS declarations go here */
-@font-face {
-	font-family: 'helveticaN';
-	src: url('helvetica_n.ttf');
-}
-
-body {
-	font-family: helveticaN;
-}
-
 #logoImage {
 	width: auto;
 	height: 300px;

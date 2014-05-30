@@ -39,6 +39,7 @@ if (Meteor.isClient) {
     $("#noBtn-lim-comp-check").click(function(){
       $("#question_div").html("<p>Use integral test.</p>");
     });
+    
     // $("input:button[id=yesBtn, dataq=root-check]").click(function() {
     //   console.log("CLICKED YES AND ROOT CHECK 2");
     // });
