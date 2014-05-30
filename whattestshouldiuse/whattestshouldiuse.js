@@ -6,38 +6,42 @@ var user_response = [0,0,0,0];
 if (Meteor.isClient) {
   $(document).ready(function() {
     var model_chosen = "";
-    $("#yesBtn").click(function() {
-      console.log("YOU CLICKED YES VIA JQUERY");
-      var divID = $(this).attr("data-q");
-      if (divID == "nth-term")
-      {
-        user_response = [1,0,0,0];
-        $("#question_div").html("<p>Diverges by nth term test</p>");
-      }
-      if (divID == "root-check")
-      {
-        $("#question_div").html("<p>Use root test.</p>");
-      }
+    $("#yesBtn-nth-term").click(function() {
+      $("#question_div").html("<p>Diverges by nth term test</p>");
     });
 
-    $("#noBtn").click(function() {
-      console.log("YOU CLICKED NO VIA JQUERY");
-      var divID = $(this).attr("data-q");
-      if (divID == "nth-term")
-      {
+    $("#yesBtn-root-check").click(function(){
+      $("#question_div").html("<p>Use root test.</p>");
+    });
+
+    $("#yesBtn-ratio-check").click(function(){
+      $("#question_div").html("<p>Use ratio test.</p>");
+    });
+
+    $("#yesBtn-lim-comp-check").click(function(){
+      $("#quesiton_div").html("<p>Use limit comparison test.</p>");
+    });
+
+    $("#noBtn-nth-term").click(function() {
         $("#nth-term").hide();
         $("#model-represent").show();
-      }
-      if (divID == "root-check")
-      {
-        $("#question_div").html("<p>Use integral test.</p>");
-      }
-      if (divID == "ratio-check")
-      {
-        $("#ratio-check").hide();
-        $("#lim-comp-check").show();
-      }
-    })
+    });
+
+    $("#noBtn-root-check").click(function(){
+      $("#question_div").html("<p>Use integral test.</p>");
+    });
+
+    $("#noBtn-ratio-check").click(function(){
+      $("#ratio-check").hide();
+      $("#lim-comp-check").show();
+    });
+
+    $("#noBtn-lim-comp-check").click(function(){
+      $("#quesiton_div").html("<p>Use integral test.</p>");
+    });
+    // $("input:button[id=yesBtn, dataq=root-check]").click(function() {
+    //   console.log("CLICKED YES AND ROOT CHECK 2");
+    // });
 
     $("#model_submit").click(function(){
       switch (model_chosen)
@@ -70,6 +74,7 @@ if (Meteor.isClient) {
     $("input:radio[name=user_model]").click(function() {
       model_chosen = $(this).val();
     }); 
+
   });
 
   Meteor.startup(function () {

@@ -4,6 +4,7 @@
 
 <body>
 	<div id="container">
+		<a href="/"><input type="button" class="btn btn-primary btn-small" value="Home"/></a>
 		<img src="logo.png" id="logoImage">
 		<br/> 
 		<div id="startBtn_div">
@@ -14,12 +15,12 @@
   		<div id="nth-term">
   			<img src="series/nth-term.png" id="question_name">
 			<br/>
-			<input type="button" class="btn btn-success btn-medium btn-answer" value="Yes" id="yesBtn" data-q="nth-term">
-			<input type="button" class="btn btn-danger btn-medium btn-answer" value="No" id="noBtn" data-q="nth-term">
+			<input type="button" class="btn btn-success btn-medium btn-answer" value="Yes" id="yesBtn-nth-term" data-q="nth-term">
+			<input type="button" class="btn btn-danger btn-medium btn-answer" value="No" id="noBtn-nth-term" data-q="nth-term">
   		</div>
 
   		<div id="model-represent">
-  			What looks like yours?
+  			Which of the following represents your series?
   			<br/>
   			<input type="radio" name="user_model" value="geo"/>
   			<img src="series/geo.png" id="question_name">
@@ -41,6 +42,32 @@
 
 			<input type="button" value="Submit" class="btn btn-primary btn-large" id="model_submit"/>
   		</div>
+
+  		<div id="root-check">
+  			root check
+  			<img src="" id="question_name">
+			<br/>
+			<input type="button" class="btn btn-success btn-medium btn-answer" value="Yes" id="yesBtn-root-check" data-q="root-check">
+			<input type="button" class="btn btn-danger btn-medium btn-answer" value="No" id="noBtn-root-check" data-q="root-check">
+  		</div>
+
+  		<div id="ratio-check">
+  			ratio check
+  			<img src="" id="question_name">
+			<br/>
+			<input type="button" class="btn btn-success btn-medium btn-answer" value="Yes" id="yesBtn-ratio-check" data-q="ratio-check">
+			<input type="button" class="btn btn-danger btn-medium btn-answer" value="No" id="noBtn-ratio-check" data-q="ratio-check">
+  		</div>
+
+  		<div id="lim-comp-check">
+  			lim-comp-check
+  			<img src="" id="question_name">
+			<br/>
+			<input type="button" class="btn btn-success btn-medium btn-answer" value="Yes" id="yesBtn-lim-comp-check" data-q="lim-comp-check">
+			<input type="button" class="btn btn-danger btn-medium btn-answer" value="No" id="noBtn-lim-comp-check" data-q="lim-comp-check">
+  		</div>
+
+
   		
 		<div id="geo">
 			<img src="series/geometric.png" id="question_name">
@@ -70,14 +97,6 @@
 			<input type="button" class="btn btn-danger btn-medium btn-answer" value="No" id="noBtn" data-q="ast">
   		</div>
 
-  		<div id="root-check">
-  			root check
-  			<img src="" id="question_name">
-			<br/>
-			<input type="button" class="btn btn-success btn-medium btn-answer" value="Yes" id="yesBtn" data-q="root-check">
-			<input type="button" class="btn btn-danger btn-medium btn-answer" value="No" id="noBtn" data-q="root-check">
-  		</div>
-
   		<div id="integral">
   			integral
   			<img src="" id="question_name">
@@ -86,21 +105,7 @@
 			<input type="button" class="btn btn-danger btn-medium btn-answer" value="No" id="noBtn" data-q="integral">
   		</div>
 
-  		<div id="ratio-check">
-  			ratio check
-  			<img src="" id="question_name">
-			<br/>
-			<input type="button" class="btn btn-success btn-medium btn-answer" value="Yes" id="yesBtn" data-q="ratio-check">
-			<input type="button" class="btn btn-danger btn-medium btn-answer" value="No" id="noBtn" data-q="ratio-check">
-  		</div>
-
-  		<div id="lim-comp-check">
-  			lim-comp-check
-  			<img src="" id="question_name">
-			<br/>
-			<input type="button" class="btn btn-success btn-medium btn-answer" value="Yes" id="yesBtn" data-q="lim-comp-check">
-			<input type="button" class="btn btn-danger btn-medium btn-answer" value="No" id="noBtn" data-q="lim-comp-check">
-  		</div>
+  		
 
   		<div id="lim-comp">
   			lim-comp

@@ -1,8 +1,24 @@
 /* CSS declarations go here */
+@font-face
+{
+	font-family: 'helveticaN';
+	src: url('helvetica_n.ttf');
+}
+
+	#home {
+		text-align: center;
+		margin: 0 auto;
+		font-family: helveticaN;
+}
+
 #logoImage {
 	width: auto;
 	height: 300px;
 }
+
+/*#questionName:hover {
+	background: yellow;
+}*/
 
 /*body {
 	height: 100%;
