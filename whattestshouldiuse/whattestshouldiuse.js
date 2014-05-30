@@ -14,6 +14,10 @@ if (Meteor.isClient) {
         user_response = [1,0,0,0];
         $("#question_div").html("<p>Diverges by nth term test</p>");
       }
+      if (divID == "root-check")
+      {
+        $("#question_div").html("<p>Use root test.</p>");
+      }
     });
 
     $("#noBtn").click(function() {
@@ -24,26 +28,48 @@ if (Meteor.isClient) {
         $("#nth-term").hide();
         $("#model-represent").show();
       }
+      if (divID == "root-check")
+      {
+        $("#question_div").html("<p>Use integral test.</p>");
+      }
+      if (divID == "ratio-check")
+      {
+        $("#ratio-check").hide();
+        $("#lim-comp-check").show();
+      }
     })
 
     $("#model_submit").click(function(){
-      switch (model_chosen):
+      switch (model_chosen)
       { 
         case "geo":
-          $("#question_div").html("<p>Use geometric series test for your series</p>");
+          $("#question_div").html("<p>Use the geometric series test.</p>");
           user_response[1] = 1;
           break;
         case "telescoping":
-          $("#question_div").html("<p>")
-
+          $("#question_div").html("<p>Use the telescoping series test.</p>");
+          break;
+        case "p-series":
+          $("#question_div").html("<p>Use the p-series test.</p>");
+          break;
+        case "ast":
+          $("#question_div").html("<p>Use the alternating series test.</p>");
+          break;
+        case "root-test":
+          $("#model-represent").hide();
+          $("#root-check").show();
+          break;
+        case "NOTA":
+          $("#model-represent").hide();
+          $("#ratio-check").show();
+          break;
       }
-      else if (model)
       console.log(model_chosen);
     });
 
     $("input:radio[name=user_model]").click(function() {
       model_chosen = $(this).val();
-    });
+    }); 
   });
 
   Meteor.startup(function () {
