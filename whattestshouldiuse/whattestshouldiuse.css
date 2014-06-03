@@ -3,14 +3,16 @@
 	display: block;
 	width: 400px;
 	height: auto;
-	margin-right: auto;
+	text-align: center;
 	margin-left: auto;
+	margin-right: auto;
 }
 
 #logoAnimate {
 	display: block;
 	width: 600px;
 	height: auto;
+	text-align: center;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -21,10 +23,12 @@
 	margin-right: auto;
 }
 
-#startBtn {
-	width: 80px;
-	margin-left: auto;
-	margin-right: auto;
+#startBtn_div {
+	text-align: center;
+}
+
+#question_div {
+	text-align: center;
 }
 
 #homeBtn {

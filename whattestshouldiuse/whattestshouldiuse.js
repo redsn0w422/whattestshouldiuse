@@ -10,8 +10,8 @@ if (Meteor.isClient) {
     $("#logoImage-st2").hide();
     $("#logoImage-st3").hide();
 
-    $("#logoImage-st1").delay(200).fadeIn(1000).delay(2000).fadeOut(1000);
-    $("#logoImage-st2").delay(200).fadeIn(1000).delay(2000).fadeOut(1000);
+    $("#logoImage-st1").delay(200).fadeIn(500).delay(200).fadeOut(500);
+    $("#logoImage-st2").delay(200).fadeIn(500).delay(200).fadeOut(500);
 
     $("#logoImage-st2").queue(function() {
       $("#container").fadeIn(3000);
